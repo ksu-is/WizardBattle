@@ -80,37 +80,37 @@ elif gameselect == "s":
             print(playername, "did not cast a spell")
         else:
             print(playername,"casted", playerpick)
-        print(wizardname,"casted", CPUpick)
+            print(wizardname,"casted", CPUpick)
 
         if playerpick == CPUpick:
             print("The spells cancelled eachother out, recast your spell!")
         elif playerpick == "":
             print("You took a direct hit,", playername, "use a spell next time!")
-            playerlives = playerlives - 1
+            playerlives -= 1
         elif playerpick == "Fire":
             if CPUpick == "Ice":
                 print("You're spell overpowered", wizardname, "you have done damage!")
-                CPUlives = CPUlives - 1
+                CPUlives -= 1
             elif CPUpick == "Water":
                 print("You're spell was overpowered by", wizardname, "you have taken damage!")
-                playerlives = playerlives - 1
+                playerlives -= 1
         elif playerpick == "Water":
             if CPUpick == "Fire":
                 print("You're spell overpowered", wizardname, "you have done damage!")
-                CPUlives = CPUlives - 1
+                CPUlives -= 1
             elif CPUpick == "Ice":
                 print("You're spell was overpowered by", wizardname, "you have taken damage!")
-                playerlives = playerlives - 1
+                playerlives -= 1
         elif playerpick == "Ice":
             if CPUpick == "Water":
                 print("You're spell overpowered", wizardname, "you have done damage!")
-                CPUlives = CPUlives - 1
+                CPUlives -= 1
             elif CPUpick == "Fire":
                 print("You're spell was overpowered by", wizardname, "you have taken damage!")
-                playerlives = playerlives - 1
+                playerlives -= 1
 
         if playerlives or CPUlives == 0:
-            
+
             playagain = input("Would You like to battle again? (y/n) ").lower()
             if playagain != "y":
                 break
