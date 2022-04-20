@@ -11,11 +11,10 @@ Evaluated tutorial
 - [Tutorials](https://www.youtube.com/watch?v=GhPZHvhvlsk )
 # Sprint 2:
 - [x] Begin coding
-- Make code for quiz questions
-- Research more repositories and tutorials:
+- [x] Make code for multiplayer vs single player option
+- [x] Create text outline for every game scenario and create spell match-ups
+- [x] Research more repositories and tutorials:
 - [Rock, Paper, Scissors](https://gist.github.com/jpwhite3/43037f283cb8b097ec7d19e33ac8006ez)
-
-- Look into databases to implement into project
 - [] Make small updates and add commit messages
 - [] Commit at least 6 code changes
 - [] Track progress in project road map
