@@ -68,7 +68,7 @@ elif gameselect == "s":
 
     playermoney = 0
 
-    while True:
+    while playerlives and CPUlives !=0:
         options = ["Fire", "Water", "Ice"]
         CPUpick = random.choice(options)
         playerpick = None
