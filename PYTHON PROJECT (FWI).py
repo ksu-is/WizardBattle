@@ -15,7 +15,7 @@ if gameselect == "m":
    player1pick = None
    player2pick = None
 
-   while player1lives and player2lives != 0:
+   while  player2lives or player1lives > 0:
         player1pick = input("Alright,",player1name,"cast your spell: Water, Fire, or Ice! ")
         player2pick = input("Alright,",player2name,"cast your spell: Water, Fire, or Ice! ")
 
@@ -66,9 +66,7 @@ elif gameselect == "s":
     CPUlives = 3
     playerlives = 3
 
-    playermoney = 0
-
-    while playerlives and CPUlives !=0:
+    while CPUlives or playerlives > 0:
         options = ["Fire", "Water", "Ice"]
         CPUpick = random.choice(options)
         playerpick = None
@@ -86,28 +84,28 @@ elif gameselect == "s":
             print("The spells cancelled eachother out, recast your spell!")
         elif playerpick == "":
             print("You took a direct hit,", playername, "use a spell next time!")
-            playerlives -= 1
+            playerlives = playerlives - 1
         elif playerpick == "Fire":
             if CPUpick == "Ice":
                 print("You're spell overpowered", wizardname, "you have done damage!")
-                CPUlives -= 1
+                CPUlives = CPUlives - 1
             elif CPUpick == "Water":
                 print("You're spell was overpowered by", wizardname, "you have taken damage!")
-                playerlives -= 1
+                playerlives = playerlives - 1
         elif playerpick == "Water":
             if CPUpick == "Fire":
                 print("You're spell overpowered", wizardname, "you have done damage!")
-                CPUlives -= 1
+                CPUlives = CPUlives - 1
             elif CPUpick == "Ice":
                 print("You're spell was overpowered by", wizardname, "you have taken damage!")
-                playerlives -= 1
+                playerlives = playerlives - 1
         elif playerpick == "Ice":
             if CPUpick == "Water":
                 print("You're spell overpowered", wizardname, "you have done damage!")
-                CPUlives -= 1
+                CPUlives = CPUlives - 1
             elif CPUpick == "Fire":
                 print("You're spell was overpowered by", wizardname, "you have taken damage!")
-                playerlives -= 1
+                playerlives = playerlives - 1
 
         if playerlives or CPUlives == 0:
 
